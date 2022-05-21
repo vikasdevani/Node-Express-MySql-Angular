@@ -1,0 +1,11 @@
+<div class="container">
+    <section class="pt-5 pb-5">
+        <div class="container">
+            <h2 class="text-center font-weight-bold mb-5 mt-5">View cart</h2>
+            <div class="row d-flex equal">
+                <app-product class="col-md-4 mb-4" *ngFor="let product of products" [product]="product" (cartUpdated)="cartUpdate($event)">
+                </app-product>
+            </div>
+        </div>
+    </section>
+</div>

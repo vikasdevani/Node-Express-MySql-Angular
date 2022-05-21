@@ -1,0 +1,13 @@
+<div class="container">
+    <a href="#" routerLink="/product/create/" class="btn btn-success">Create New Product</a>
+    <section class="pt-5 pb-5">
+        <div class="container">
+            <h2 class="text-center font-weight-bold mb-5 mt-5">Related products</h2>
+            <div class="row d-flex equal">
+                <app-product class="col-md-4 mb-4" *ngFor="let product of products" [product]="product"
+                    infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScrollDown()">
+                </app-product>
+            </div>
+        </div>
+    </section>
+</div>

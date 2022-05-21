@@ -1,0 +1,19 @@
+<div class="card h-100 border-0">
+    <div class="card-img-top img-container">
+        <img src="{{ product.image }}" class="img-fluid mx-auto d-block" alt="Card image cap">
+    </div>
+    <div class="card-body text-center">
+        <h4 class="card-title">
+            <a href="#" class=" font-weight-bold text-dark text-uppercase small"> {{ product.name }}</a>
+        </h4>
+        <h5 class="card-price small text-warning">
+            <i>
+                $ {{ product.price }}</i>
+        </h5>
+        <div>
+            <div>
+                <button (click)="add()">➕</button><span class="p-3 m-3">{{count}}</span> <button (click)="remove()">➖</button>
+            </div>
+        </div>
+    </div>
+</div>

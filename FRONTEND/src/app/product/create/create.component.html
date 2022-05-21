@@ -1,0 +1,38 @@
+<div class="container">
+
+    <h1>Create New Product</h1>
+
+
+    <form class="col-md-4 mb-4" [formGroup]="form" (ngSubmit)="submit()">
+
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input formControlName="name" id="name" type="text" class="form-control">
+            <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+                <div *ngIf="f['name'].errors && f['name'].errors['required']">Name is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input formControlName="price" id="price" type="number" class="form-control">
+            <div *ngIf="f['price'].touched && f['price'].invalid" class="alert alert-danger">
+                <div *ngIf="f['price'].errors && f['price'].errors['required']">Price is required.</div>
+                <div *ngIf="f['price'].errors && f['price'].errors['max']">Please enter maximum 7 digits.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="image">File:</label>
+            <input formControlName="image" id="image" type="file" class="form-control" (change)="onFileSelect($event)"  accept="image/png, image/gif, image/jpeg">
+            <div *ngIf="f['image'].touched && f['image'].invalid" class="alert alert-danger">
+                <div *ngIf="f['image'].errors && f['image'].errors['required']">File is required.</div>
+            </div>
+        </div>
+
+        <div class="mt-2">
+            <a href="#" routerLink="/product/list" class="btn btn-primary me-2">Back</a>
+            <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+        </div>
+    </form>
+</div>

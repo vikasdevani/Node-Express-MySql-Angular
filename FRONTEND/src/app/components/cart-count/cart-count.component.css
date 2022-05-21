@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  text-align: right;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem;
+  font-size: 1.5rem
+}
+a {
+  color: #fff !important;
+  text-decoration: none !important;
+  display: block !important;
+}
+a:hover {
+  color: #fff !important;
+}

@@ -1,0 +1,5 @@
+/* Resize images */
+.img-container img {
+    height: 250px;
+    width: auto;
+}
